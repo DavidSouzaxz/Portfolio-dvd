@@ -1,0 +1,264 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Poppins', sans-serif ;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 100px;
+  padding-left: auto;
+  background-color: #000;
+  height: 100vh;
+
+}
+
+section{
+  padding-top: 100px ;
+  scroll-margin-top: 100px;
+}
+
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex{
+  display:flex;
+}
+
+.btn-voltar button{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgb(229, 0, 0);
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-voltar{
+  padding-top: 30px;
+}
+
+/*ESTILO CABEÇALHO*/
+
+header.menu-fixo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+  padding: 20px 4%;
+  background-color: #000000;
+}
+
+
+header > .interface{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a{
+  color: #7d7d7d;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s;
+}
+
+header nav.menu-desktop a:hover{
+  color: #e9e9e9;
+  transform: scale(1.05);
+}
+
+header nav ul{
+  list-style-type: none;
+}
+
+header nav.menu-desktop{
+  display: fixed;
+}
+
+header nav.menu-desktop ul li{
+  display: inline-block;
+  padding: 0 40px;
+}
+
+header .btn-contato button:hover{
+  box-shadow: 0px 0px 8px rgb(154, 1, 1);
+  transform: scale(1.05);
+}
+
+.overlay-menu{
+  background-color: #00000071;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+  
+}
+
+/*ESTIO CABEÇALHO FINAL*/
+
+/*ESTILO TOPO DO SITE*/ 
+
+section .topo-do-site .flex{
+  gap: 40px;
+}
+
+.topo-do-site h1{
+  color: #fff;
+  font-size: 50px;
+}
+
+.topo-do-site h1 span{
+  color: rgb(229, 0, 0);
+}
+
+section.topo-do-site{
+  padding-top: 200px;
+  padding-left: auto;
+  display: flex;
+  text-align: center;
+}
+
+.topo-do-site p{
+  color: #fff;
+}
+
+
+.menu-mobile{
+  display: none;
+}
+
+/*ESTILO TOPO DO SITE FINAL*/ 
+
+
+@media screen and (max-width:1020px){
+  /*CLASSES GERAIS*/
+  .flex{
+    flex-direction: column;
+  }
+
+  h2.titulo{
+    font-size: 35px;
+    line-height: 30px;
+  }
+
+
+  /*CABEÇALHO*/
+  .menu-desktop, .btn-contato{
+    display: none;
+  }
+
+  /*TOPO DO SITE*/
+
+  section .topo-do-site .flex{
+    gap: 20px;
+  }
+
+  .topo-do-site h1{
+    color: #fff;
+    font-size: 50px;
+  }
+
+  section.topo-do-site{
+    padding: 20px 8%;
+    display: flex;
+  }
+  
+  .topo-do-site p{
+    color: #fff;
+  }
+  
+  .btn-voltar button{
+    padding: 10px 40px;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: rgb(229, 0, 0);
+    border: 0;
+    border-radius: 30px;
+    transition: .2s;
+  }
+  
+  .btn-voltar{
+    padding-top: 30px;
+  }
+
+
+  /*ESTILO DO MENU MOBILE*/
+
+  .btn-abrir-menu i{
+  color: rgb(229, 0, 0);
+  font-size: 40px;
+
+  }
+
+  /*ESTILO DO MENU MOBILE*/
+  .menu-mobile{
+  display: block;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: .5s;
+  }
+
+  .menu-mobile.abrir-menu{
+  width: 60%;
+  }
+
+  .menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+  }
+
+  .menu-mobile .btn-fechar{
+  padding: 20px 5%;
+  }
+
+  .menu-mobile nav ul{
+  text-align: right;
+  }
+
+  .menu-mobile nav ul li a{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+  }
+
+  .menu-mobile nav ul li a:hover{
+  background-color: rgb(229, 0, 0);
+  color: #000;
+  }
+
+  .menu-mobile .btn-fechar i{
+  color: rgb(229, 0, 0);
+  font-size: 30px;
+  }
+
+  section.topo-do-site{
+    padding-top: 100px;
+    padding-left: auto;
+    display: flex;
+    text-align: center;
+  }
+
+
+} 
