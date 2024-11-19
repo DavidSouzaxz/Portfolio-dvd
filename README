@@ -13,10 +13,10 @@ Este portfólio foi criado para apresentar minhas habilidades e projetos realiza
 
    - Clone o repositório:
      ```bash
-     git clone https://github.com/usuario/portfolio.git
+     git clone https://github.com/Dvd-coder-art/portfolio.git
      ```
 
-   - Ou baixe a pasta diretamente [aqui](link-do-repositorio-ou-pasta).
+   - Ou baixe a pasta diretamente https://github.com/Dvd-coder-art/Portf-lio.
 
 2. **Abra o arquivo HTML**:
    - O arquivo principal do portfólio é `index.html`. Basta abri-lo em qualquer navegador para visualizar o site funcionando localmente.
