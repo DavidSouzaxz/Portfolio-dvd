@@ -32,6 +32,7 @@ section{
 }
 
 .btn-voltar button{
+  color: #000;
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 600;
