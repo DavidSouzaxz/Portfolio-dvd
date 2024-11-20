@@ -30,17 +30,17 @@
   revelar.reveal('.efeito-especialidades2', {
     duration: 2000,
     distance: '90px',
-    delay: 1000
+    delay: 500
   });
   revelar.reveal('.efeito-especialidades3', {
     duration: 2000,
     distance: '90px',
-    delay: 1500
+    delay: 500
   });
   revelar.reveal('.efeito-especialidades4', {
     duration: 2000,
     distance: '90px',
-    delay: 2000
+    delay: 500
   });
 
   //fundador
