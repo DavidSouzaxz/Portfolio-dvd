@@ -25,22 +25,22 @@
   revelar.reveal('.efeito-especialidades1', {
     duration: 2000,
     distance: '90px',
-    delay: 500
+    delay: 200
   });
   revelar.reveal('.efeito-especialidades2', {
     duration: 2000,
     distance: '90px',
-    delay: 500
+    delay: 200
   });
   revelar.reveal('.efeito-especialidades3', {
     duration: 2000,
     distance: '90px',
-    delay: 500
+    delay: 200
   });
   revelar.reveal('.efeito-especialidades4', {
     duration: 2000,
     distance: '90px',
-    delay: 500
+    delay: 200
   });
 
   //fundador
@@ -63,40 +63,38 @@
     duration: 2000,
     distance: '90px',
     origin: 'left',
-    delay:500,
-
-
+    delay:300
     
   });
   revelar.reveal('.efeito-projeto2', {
     duration: 2000,
     distance: '90px',
     origin: 'left',
-    delay:600
+    delay:300
   });
   revelar.reveal('.efeito-projeto3', {
     duration: 2000,
     distance: '90px',
     origin: 'left',
-    delay:700
+    delay:300
   });
   revelar.reveal('.efeito-projeto4', {
     duration: 2000,
     distance: '90px',
     origin: 'left',
-    delay:800
+    delay:300
   });
   revelar.reveal('.efeito-projeto5', {
     duration: 2000,
     distance: '90px',
     origin: 'left',
-    delay:900
+    delay:300
   });
   revelar.reveal('.efeito-projeto6', {
     duration: 2000,
     distance: '90px',
     origin: 'left',
-    delay:1000
+    delay:300
   });
 
   //formulario
