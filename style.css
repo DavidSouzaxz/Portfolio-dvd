@@ -319,6 +319,7 @@ section.projetos .flex{
   margin-top: -50px;
   padding: 5px 10px;
   text-align: center;
+  text-decoration:none;
 
 }
 
@@ -503,7 +504,7 @@ footer .line-footer p a:hover{
   .sobre .txt-sobre h2{
     font-size: 34px;
     line-height: 35px;
-   text-align: center;
+    text-align: center;
   }
 
   .btn-social{
@@ -516,8 +517,7 @@ footer .line-footer p a:hover{
   }
 
   .img-sobre img{
-    height: 290px;
-    width: 255px;
+    visibility:hidden;
   }
 
   /*PROJETOS*/
