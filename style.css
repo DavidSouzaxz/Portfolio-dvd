@@ -516,10 +516,6 @@ footer .line-footer p a:hover{
     gap: 60px;
   }
 
-  .img-sobre img{
-    visibility:hidden;
-  }
-
   /*PROJETOS*/
   section.projetos {
     text-align: center;
