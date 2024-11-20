@@ -265,6 +265,7 @@ section.sobre .flex{
 }
 
 .btn-social button{
+  color:#000;
   width: 60px;
   height: 60px;
   border-radius: 50%;
