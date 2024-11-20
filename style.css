@@ -431,6 +431,10 @@ footer .line-footer p a:hover{
 
 @media screen and (max-width:1020px){
   /*CLASSES GERAIS*/
+   body{
+    overflow-x: hidden;
+  }
+  
   .flex{
     flex-direction: column;
   }
