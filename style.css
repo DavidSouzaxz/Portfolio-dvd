@@ -329,8 +329,7 @@ section.projetos .flex{
 
 
 .projetos .projeto-box img {
-  width: 100%; 
-  height: auto;
+  height: 290px;
   border-radius: 10px; 
   
 }
@@ -542,9 +541,9 @@ footer .line-footer p a:hover{
     flex-direction: column;           
   }
   
-  .projeto-box img {
+  .projetos .projeto-box img {
     width: 100%;                     
-    height: auto;                     
+    height: 150px;                 
   }
   
   .projetos .projeto-box h3 {
