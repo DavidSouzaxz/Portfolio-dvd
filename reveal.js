@@ -78,24 +78,6 @@
     origin: 'left',
     delay:300
   });
-  revelar.reveal('.efeito-projeto4', {
-    duration: 2000,
-    distance: '90px',
-    origin: 'left',
-    delay:300
-  });
-  revelar.reveal('.efeito-projeto5', {
-    duration: 2000,
-    distance: '90px',
-    origin: 'left',
-    delay:300
-  });
-  revelar.reveal('.efeito-projeto6', {
-    duration: 2000,
-    distance: '90px',
-    origin: 'left',
-    delay:300
-  });
 
   //formulario
   revelar.reveal('.efeito-formulario',{
