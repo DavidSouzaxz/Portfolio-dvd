@@ -286,21 +286,11 @@ section.sobre .flex{
 /*ESTILO PROJETOS*/
 section.projetos{
   padding: 40px 4%;
-  justify-content: center;
 }
 
 section.projetos .titulo{
   margin-top: 40px;
   padding: 75px 4%;
-}
-
-section.projetos .flex{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-  gap: 20px;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
 }
 
 
@@ -323,14 +313,13 @@ section.projetos .flex{
   margin-top: -50px;
   padding: 5px 10px;
   text-align: center;
-  
 
 }
 
 
 .projetos .projeto-box img {
-  height: auto;
-  
+  height: 330px;
+  border-radius: 10px; 
   
 }
 
@@ -524,12 +513,7 @@ footer .line-footer p a:hover{
     text-align: center;
   }
   
-  section.projetos .flex {
-    display: grid;                   
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 100px;                       
-    max-width: 1200px;               
-    margin: 0 auto;                  
+ section.projetos .flex {                                                   
     padding: 20px;                  
   }
   
@@ -541,8 +525,10 @@ footer .line-footer p a:hover{
     flex-direction: column;           
   }
   
-  .projetos .projeto-box img {                    
-    height: auto;                 
+  .projetos .projeto-box img {
+    width: 100%;                     
+    height: auto;     
+          
   }
   
   .projetos .projeto-box h3 {
