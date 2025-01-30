@@ -269,7 +269,6 @@ section.sobre .flex{
 }
 
 .btn-social button{
-  color:#000;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -283,6 +282,123 @@ section.sobre .flex{
 
 /*ESTILO DO SOBRE FIM*/
 
+/*CERTIFICADOS INICIO*/
+section.certificados{
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  padding: 40px;
+  box-shadow: 0 10px 10px -15px  #6c6c6c;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo{ 
+  font-size: 30px;
+  color: #fff;
+}
+
+.container-box {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  max-width: 1920px;
+}
+
+
+.container-box.active{
+  height: auto;
+  overflow: visible;
+}
+
+.box {
+  flex-direction: column;
+  text-align: center;
+  width: 500px;
+  height: 350px;
+  margin: 20px; 
+  perspective: 1000px; 
+}
+
+.box:hover .flip {
+  transform: rotateY(180deg);
+}
+
+.box a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.box img{
+  width:450;
+  height:350px;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+
+
+.flip {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+
+.frente, .tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.frente{
+  height: auto;
+}
+
+.tras {
+  transform: rotateY(180deg);
+}
+
+
+.box p{
+  margin-top: 10px; 
+  color: #fff;
+  font-weight: 200;
+  position: relative; 
+  z-index: 2; 
+  text-transform: capitalize;
+}
+
+.btn-saber-mais{
+  margin: 30px;
+}
+
+.btn-saber-mais button {
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid rgb(229, 0, 0);
+  background-color: #00000000;
+  color: rgb(229, 0, 0);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-saber-mais button:hover {
+  background-color: rgb(229, 0, 0);
+  color: white;
+}
+
+/*CERTIFICADOS FIM*/
+
+
 /*ESTILO PROJETOS*/
 section.projetos{
   padding: 40px 4%;
@@ -293,11 +409,13 @@ section.projetos .titulo{
   padding: 75px 4%;
 }
 
+.container-projetos{
+  justify-content: center;
+}
 
 .projetos .projeto-box{
   color: #fff;
   padding: 15px 3%;
-  border-radius: 20px;
   transition: .2s;
   cursor: pointer;
   display: flex;
@@ -467,12 +585,12 @@ footer .line-footer p a:hover{
     position: relative;
     width: 100%;
     height: 350px;
-   
-    
-
   }
   
+
+
   /*ESPECIALIDADES*/
+
 
   section.especialidades{
     padding: 40px 10%;
@@ -496,7 +614,7 @@ footer .line-footer p a:hover{
   .sobre .txt-sobre h2{
     font-size: 34px;
     line-height: 35px;
-    text-align: center;
+   text-align: center;
   }
 
   .btn-social{
@@ -508,12 +626,39 @@ footer .line-footer p a:hover{
     gap: 60px;
   }
 
+  .img-sobre img{
+    height: 290px;
+    width: 255px;
+  }
+
+  /*CERTIFICADOS*/
+
+  .container-box{
+    height: 250px;
+    width: 100%;
+  }
+
+  .flip{
+    height: 200px;
+  }
+
+  .box{
+    height: auto;
+  }
+
+  .box img{
+    height: 200px;
+  
+  }
+  
+
   /*PROJETOS*/
   section.projetos {
     text-align: center;
   }
   
- section.projetos .flex {                                                   
+  section.projetos .flex {                  
+                                      
     padding: 20px;                  
   }
   
@@ -532,9 +677,9 @@ footer .line-footer p a:hover{
   }
   
   .projetos .projeto-box h3 {
-    margin-top: -30px;
+    margin-top: -20px;
     padding: 5px 10px;
-    font-weight: 400;
+    font-weight: 200;
     margin: 0;
     color: #fff;
     font-size: 18px;
@@ -551,9 +696,9 @@ footer .line-footer p a:hover{
     width: 100%;
   }
 
- form{
- padding: 40px 8%;
- }
+  form{
+  padding: 40px 8%;
+  }
  
   
   /*RODAPÉ*/
