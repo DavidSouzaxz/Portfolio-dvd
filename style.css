@@ -400,46 +400,114 @@ section.certificados{
 
 
 /*ESTILO PROJETOS*/
-section.projetos{
+section.projetos {
   padding: 40px 4%;
+  width: 100%;
+  display: flex;
 }
 
-section.projetos .titulo{
+section.projetos .titulo {
   margin-top: 40px;
   padding: 75px 4%;
 }
 
-.container-projetos{
+.container-projetos {
   justify-content: center;
+  display: flex;
 }
 
-.projetos .projeto-box{
+.projeto-box {
   color: #fff;
-  padding: 15px 3%;
-  transition: .2s;
+  padding: 20px;
+  transition: 0.2s;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  display: inline-block;
+}
+
+.projeto-box:hover h3{
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.projeto-box:hover p{
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.projeto-box img {
+  height: 280px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.projeto-box:hover img {
+  transform: scale(1.05);
+  filter: none;
+  box-shadow: 0px 0px 8px rgb(154, 1, 1)
+}
+
+.projeto-box:hover .text{
+  background-color: rgb(229, 0, 0);
+  box-shadow: 0px 0px 8px rgb(154, 1, 1)
+}
+
+.container-projetos:hover .projeto-box:not(:hover) h3{
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.container-projetos:hover .projeto-box:not(:hover) p{
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.container-projetos:hover .projeto-box:not(:hover) img {
+  transform: scale(0.9);
+  filter: blur(2px);
+  box-shadow: rgba(154, 1, 1, 0.513) 0px 0px 10px 7px;
+}
+.container-projetos:hover .projeto-box:not(:hover) .text {
+  transform: scale(0.9);
+  opacity: 0;
 }
 
 
-
-.projetos .projeto-box h3{
-  margin-top: -50px;
-  padding: 5px 10px;
-  text-align: center;
-
-}
-
-
-.projetos .projeto-box img {
-  height: 330px;
-  border-radius: 10px; 
+.projeto-box h3{
+  font-size: 15px;
   
+  transition: 0.2s ease-in-out;
+  color: rgb(229, 0, 0);
+  font-weight: 500;
 }
+
+.projeto-box p{
+  font-size: 10px;
+  transition: 0.2s ease-in-out;
+  color: #000000;
+}
+
+.projeto-box .text {
+  position: absolute;
+  padding: 10px;
+  bottom: 15%;
+  left: 7%;
+  width: auto;
+  height: auto; 
+  background: none; 
+  text-align: justify; 
+  box-sizing: border-box; 
+  transition: 0.2s ease-out;
+  border-radius: 10px;
+  border: 1px solid rgb(229, 0, 0)
+}
+
+
 
 /*ESTILO PROJETOS FIM*/
 
@@ -671,22 +739,26 @@ footer .line-footer p a:hover{
   }
   
   .projetos .projeto-box img {
-    width: 100%;                     
+    width: auto;                     
     height: auto;     
-          
   }
-  
-  .projetos .projeto-box h3 {
-    margin-top: -20px;
-    padding: 5px 10px;
-    font-weight: 200;
-    margin: 0;
+
+  .projeto-box h3{
     color: #fff;
-    font-size: 18px;
-    text-align: center;
-    
+    font-size: 13px;
+  }
+
+  .projeto-box p{
+    color: #fff;
+    font-size: 8px;
   }
   
+  .projeto-box .text {
+    background: rgb(229, 0, 0);
+    bottom: 25%;
+    height: auto;
+    width: auto;
+  }
   
 
   /*FORMULARIO*/
