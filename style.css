@@ -400,6 +400,57 @@ section.projetos .titulo {
   position: relative;
   overflow: visible;
   display: inline-block;
+  
+  
+}
+
+.projeto-box a>img{
+  filter: blur(1px);
+}
+
+.projeto-box>a{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+}
+
+.ferramentas{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 6%;
+  left: 59%;
+  transition: 0.2s ease;
+  visibility: hidden;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.images{
+  display: flex;
+  gap: 2px;
+}
+
+.image-ferramenta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+
+
+.image-ferramenta>img{
+  margin: 0;
+  border: 1px solid red;
+  padding: 5px;
+  width: 30px;
+  transition: 0.2s ease;
 }
 
 .projeto-box:hover h3{
@@ -413,18 +464,41 @@ section.projetos .titulo {
 }
 
 .projeto-box img {
-  height: 280px;
-  width: auto;
+  height: 100%;
+  max-width: 490px;
   display: block;
   border-radius: 10px;
   transition: 0.2s ease-in-out;
 }
+
+
 
 .projeto-box:hover img {
   transform: scale(1.05);
   filter: none;
   box-shadow: 0px 0px 8px rgb(154, 1, 1)
 }
+
+.projeto-box:hover .ferramentas{
+  visibility: visible;
+  border-radius: 15px;
+  transform: scale(1.05);
+  filter: none;
+  flex-direction: column;
+  left: 59%;
+  background-color: rgb(229, 0, 0);
+}
+
+.projeto-box:hover .image-ferramenta{
+  display: flex;
+  transform: scale(1.05);
+  border: none;
+  box-shadow: none;
+  box-shadow: 0px 0px 8px rgb(154, 1, 1);
+  background-color: rgb(229, 0, 0);
+}
+
+
 
 .projeto-box:hover .text{
   background-color: rgb(229, 0, 0);
@@ -631,7 +705,7 @@ footer .line-footer p a:hover{
   
 
 
-  /*ESPECIALIDADES*/
+ 
 
 
   section.especialidades{
@@ -695,6 +769,12 @@ footer .line-footer p a:hover{
   
 
   /*PROJETOS*/
+
+  .interface {
+    max-width: 100%;
+    margin: 0;
+}
+
   section.projetos {
     text-align: center;
   }
@@ -712,9 +792,11 @@ footer .line-footer p a:hover{
     flex-direction: column;           
   }
   
-  .projetos .projeto-box img {
-    width: auto;                     
-    height: auto;     
+  
+
+  .projeto-box>a>img{
+    width: 100%;
+    filter: blur(0);
   }
 
   .projeto-box h3{
@@ -733,8 +815,38 @@ footer .line-footer p a:hover{
     height: auto;
     width: auto;
   }
-  
 
+  .ferramentas {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8%;
+    left: 65%;
+    transition: 0.2s ease;
+    visibility: visible;
+    
+    border-radius: 15px;
+    background-color: rgb(229, 0, 0);
+    width: 30%;
+  
+  }
+
+  .ferramentas>h3{
+    font-size: 10px;
+  }
+
+  .ferramentas>.images{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image-ferramenta img{
+    width: 100%;
+    
+  }
   /*FORMULARIO*/
 
   section.formulario .btn-enviar{
@@ -855,5 +967,13 @@ footer .line-footer p a:hover{
   
   body {
     overflow-x: hidden; /* Bloqueia o scroll horizontal */
+  }
+}
+
+@media screen and (max-width:1560px){
+  .container-projetos {
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
   }
 }
