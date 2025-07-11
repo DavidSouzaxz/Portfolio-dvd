@@ -3,6 +3,7 @@
 import { Card, CardContent } from "./ui/card"
 import { Code, Palette, Zap } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import Image from 'next/image'
 
 export function About() {
   const [isVisible, setIsVisible] = useState(false)
@@ -47,9 +48,8 @@ export function About() {
     <section id="about" ref={sectionRef} className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre Mim</h2>
@@ -74,9 +74,13 @@ export function About() {
               </p>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full flex items-center justify-center">
+              <div className="w-80 h-80 bg-gradient-to-br efeito-subir-descer from-primary/20 to-primary/5 rounded-full flex items-center justify-center">
                 <div className="w-64 h-64 bg-gradient-to-br from-primary to-primary/60 rounded-full flex items-center justify-center text-6xl font-bold text-primary-foreground">
-                  DS
+                  <Image src='/avatar.png'
+                    alt="Avatar"
+                    width={236}
+                    height={236}
+                    className="rounded-full opacity-85" />
                 </div>
               </div>
             </div>

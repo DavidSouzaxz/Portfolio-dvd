@@ -25,9 +25,8 @@ export function Hero() {
     >
       <div className="container mx-auto px-4 text-center">
         <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-4xl font-bold text-primary-foreground">
@@ -47,9 +46,15 @@ export function Hero() {
             <Button size="lg" onClick={() => scrollToSection("projects")} className="w-full sm:w-auto">
               Ver Projetos
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent">
-              <Download className="mr-2 h-4 w-4" />
-              Download CV
+            <Button variant="outline" size="lg" className="w-full sm:w-auto bg-transparent"  >
+              <a
+                href="/curriculo-fullstack.pdf"
+                download
+                className="bg-transparent hover:bg-accent hover:text-accent-foreground inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download CV
+              </a>
             </Button>
           </div>
 
@@ -77,6 +82,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
