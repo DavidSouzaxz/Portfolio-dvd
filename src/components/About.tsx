@@ -76,7 +76,7 @@ export function About() {
             <div className="flex justify-center">
               <div className="w-80 h-80 bg-gradient-to-br efeito-subir-descer from-primary/20 to-primary/5 rounded-full flex items-center justify-center">
                 <div className="w-64 h-64 bg-gradient-to-br from-primary to-primary/60 rounded-full flex items-center justify-center text-6xl font-bold text-primary-foreground">
-                  <Image src='/avatar.png'
+                  <Image src='https://avatars.githubusercontent.com/u/187334857?v=4'
                     alt="Avatar"
                     width={236}
                     height={236}
