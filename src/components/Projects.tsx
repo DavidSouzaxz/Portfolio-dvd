@@ -39,19 +39,18 @@ export function Projects() {
       description:
         "API de Gestão de Usuários com Autenticação JWT e Criptografia de Senha.",
       image: "./screen-project-1.png",
-      technologies: ["Java", "SpringBoot", "Maven"],
+      technologies: ["Java", "SpringBoot", "Maven", "H2-Database"],
       github: "https://github.com/DavidSouzaxz/jwt-security",
       demo: "https://github.com/DavidSouzaxz/jwt-security/blob/master/README.md",
     },
     {
-      title: "To-do List",
+      title: "Api de Controle de Estoque e Vendas",
       description:
-        "Aplicativo de gerenciamento de tarefas com funcionalidades de colaboração em tempo real.",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop",
-      technologies: ["React", "Node.js", "JavaScript"],
-      github: "https://github.com/DavidSouzaxz/todo-list-react-",
-      demo: "https://github.com/DavidSouzaxz/todo-list-react-/README.md",
+        "Sistema de gerenciamento de estoque e vendas com funcionalidades de cadastro, atualização e exclusão, e impressão de extratos.",
+      image: "./screen-project-2.png",
+      technologies: ["Java", "SpringBoot", "Maven", "PostgreSQL"],
+      github: "https://github.com/DavidSouzaxz/stock-control/tree/master",
+      demo: "https://github.com/DavidSouzaxz/stock-control/tree/master/README.md",
     },
     {
       title: "Weather Dashboard",
