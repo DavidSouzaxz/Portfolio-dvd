@@ -56,11 +56,10 @@ export function Projects() {
       title: "Weather Dashboard",
       description:
         "Dashboard meteorológico com previsões detalhadas e visualizações interativas.",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=200&fit=crop",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API", "Tailwind"],
+      image: "./screen-project-3.png",
+      technologies: ["React.js", "OpenWeather API", "Axios"],
       github: "https://github.com/davidsouzaxz/weather-dashboard",
-      demo: "https://weather-dashboard-demo.vercel.app",
+      demo: "https://weather-dashboard-iota-five.vercel.app/",
     },
     {
       title: "Social Media Analytics",
