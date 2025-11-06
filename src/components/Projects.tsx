@@ -62,14 +62,14 @@ export function Projects() {
       demo: "https://weather-dashboard-iota-five.vercel.app/",
     },
     {
-      title: "Social Media Analytics",
+      title: "Register Person",
       description:
-        "Ferramenta de análise de redes sociais com métricas avançadas e relatórios personalizados.",
+        "Sistema de Cadastro de Fornecedores / Clientes.",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
-      technologies: ["React", "D3.js", "Python", "FastAPI"],
-      github: "https://github.com/davidsouzaxz/social-analytics",
-      demo: "https://social-analytics-demo.vercel.app",
+        "./screen-project-4.png",
+      technologies: ["Angular", "Angular Material", "Scss", "Tailwindcss"],
+      github: "https://github.com/DavidSouzaxz/register-person",
+      demo: "https://register-person.vercel.app/register",
     },
     {
       title: "Quiz Feed",
