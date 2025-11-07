@@ -1,53 +1,80 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { Textarea } from "./ui/textarea"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
-import { useEffect, useRef, useState } from "react"
+import type React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 export function Contact() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
-  const sectionRef = useRef<HTMLElement>(null)
+  });
+  const [errorMessage, setErrorMessage] = useState(""); // Estado para armazenar a mensagem de erro
+  const [successMessage, setSuccessMessage] = useState(""); // Estado para armazenar a mensagem de sucesso
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.1 },
-    )
+      { threshold: 0.1 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setErrorMessage("Preencha todos os campos antes de enviar.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSuccessMessage("E-mail enviado com sucesso!");
+        setErrorMessage(""); // Limpa a mensagem de erro
+        setFormData({ name: "", email: "", message: "" }); // Limpa o formulário
+      } else {
+        setErrorMessage(result.message || "Erro ao enviar o e-mail.");
+        setSuccessMessage(""); // Limpa a mensagem de sucesso
+      }
+    } catch (error) {
+      setErrorMessage("Ocorreu um erro ao enviar o e-mail. Tente novamente mais tarde.");
+      setSuccessMessage(""); // Limpa a mensagem de sucesso
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   const contactInfo = [
     {
@@ -62,15 +89,14 @@ export function Contact() {
       value: "Fortaleza, CE",
       href: "#",
     },
-  ]
+  ];
 
   return (
     <section id="contact" ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
@@ -119,6 +145,9 @@ export function Contact() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+                  {successMessage && <p className="text-green-500">{successMessage}</p>}
+
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Nome
@@ -175,5 +204,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
