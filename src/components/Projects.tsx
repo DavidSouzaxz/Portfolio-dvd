@@ -23,7 +23,7 @@ export function Projects() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -53,20 +53,19 @@ export function Projects() {
       demo: "https://github.com/DavidSouzaxz/stock-control/tree/master/README.md",
     },
     {
-      title: "Weather Dashboard",
+      title: "EventFlow",
       description:
-        "Dashboard meteorológico com previsões detalhadas e visualizações interativas.",
-      image: "./screen-project-3.png",
-      technologies: ["React.js", "OpenWeather API", "Axios"],
-      github: "https://github.com/davidsouzaxz/weather-dashboard",
-      demo: "https://weather-dashboard-iota-five.vercel.app/",
+        "Sistema de gerenciamento de eventos com criação, edição e exclusão de eventos, além de inscrição de participantes e serviço de autenticação por email.",
+      image:
+        "https://media.licdn.com/dms/image/v2/D4E22AQGPeAHq5GW17A/feedshare-shrink_800/B4EZvldR1TGsAg-/0/1769081216717?e=1770854400&v=beta&t=Yi249_ygGb9DXS544BC3KRL3KhprnY5iQiP9ZWdobro",
+      technologies: ["React.js", "Node.js", "Prisma", "PostgreSQL"],
+      github: "https://github.com/DavidSouzaxz/event-flow-client",
+      demo: "https://event-flow-client-azure.vercel.app/",
     },
     {
       title: "Register Person",
-      description:
-        "Sistema de Cadastro de Fornecedores / Clientes.",
-      image:
-        "./screen-project-4.png",
+      description: "Sistema de Cadastro de Fornecedores / Clientes.",
+      image: "./screen-project-4.png",
       technologies: ["Angular", "Angular Material", "Scss", "Tailwindcss"],
       github: "https://github.com/DavidSouzaxz/register-person",
       demo: "https://register-person.vercel.app/register",
@@ -82,14 +81,13 @@ export function Projects() {
       demo: "https://github.com/DavidSouzaxz/QuizzFeed/blob/main/README.md",
     },
     {
-      title: "API REST",
+      title: "Weather Dashboard",
       description:
-        "A API permite realizar operações CRUD para gerenciar recursos de forma eficiente.",
-      image:
-        "https://document360.com/wp-content/uploads/2022/11/rest_api_examples_and_challenges-1200x683.jpg",
-      technologies: ["Java", "Maven", "JWT", "MySQL"],
-      github: "https://github.com/DavidSouzaxz/Rest-api",
-      demo: "https://github.com/DavidSouzaxz/Rest-api/blob/main/README.md",
+        "Dashboard meteorológico com previsões detalhadas e visualizações interativas.",
+      image: "./screen-project-3.png",
+      technologies: ["React.js", "OpenWeather API", "Axios"],
+      github: "https://github.com/davidsouzaxz/weather-dashboard",
+      demo: "https://weather-dashboard-iota-five.vercel.app/",
     },
   ];
 
