@@ -47,7 +47,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+            className="text-2xl font-medium text-primary hover:text-primary/80 transition-colors"
             aria-label="Voltar ao início"
           >
             David Souza
@@ -59,7 +59,7 @@ export function Header() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-foreground font-bold hover:text-primary  transition-colors "
               >
                 {item.label}
               </button>

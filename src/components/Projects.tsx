@@ -53,11 +53,11 @@ export function Projects() {
       demo: "https://github.com/DavidSouzaxz/stock-control/tree/master/README.md",
     },
     {
-      title: "EventFlow",
+      title: "EventFlow - Gerenciamento de Eventos",
       description:
         "Sistema de gerenciamento de eventos com criação, edição e exclusão de eventos, além de inscrição de participantes e serviço de autenticação por email.",
       image:
-        "https://media.licdn.com/dms/image/v2/D4E22AQGPeAHq5GW17A/feedshare-shrink_800/B4EZvldR1TGsAg-/0/1769081216717?e=1770854400&v=beta&t=Yi249_ygGb9DXS544BC3KRL3KhprnY5iQiP9ZWdobro",
+        "./screen-project-5.png",
       technologies: ["React.js", "Node.js", "Prisma", "PostgreSQL"],
       github: "https://github.com/DavidSouzaxz/event-flow-client",
       demo: "https://event-flow-client-azure.vercel.app/",
@@ -95,9 +95,8 @@ export function Projects() {
     <section id="projects" ref={sectionRef} className="py-20">
       <div className="container mx-auto px-4">
         <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
